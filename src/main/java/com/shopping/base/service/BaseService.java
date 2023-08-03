@@ -4,16 +4,17 @@ import com.shopping.base.entity.BaseEntity;
 import com.shopping.base.repo.BaseRepository;
 import jakarta.persistence.MappedSuperclass;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Optional;
 
 
 @MappedSuperclass
-@RequiredArgsConstructor
 public abstract class BaseService<T extends BaseEntity<ID>, ID extends Number> {
 
 
+    @Autowired
     private BaseRepository<T, ID> baseRepository;
 
     public List<T> findAll() {

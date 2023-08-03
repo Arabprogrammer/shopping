@@ -5,6 +5,6 @@ import com.shopping.management.dto.UserDto;
 import com.shopping.management.entity.User;
 import org.mapstruct.Mapper;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface UserMapper extends BaseMapper<User, UserDto> {
 }
