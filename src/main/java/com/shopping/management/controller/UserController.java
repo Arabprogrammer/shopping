@@ -21,12 +21,4 @@ public class UserController {
     private final UserService userService;
     private final UserMapper userMapper;
 
-
-    @GetMapping("/all")
-    public ResponseEntity<List<UserDto>> all() {
-        List<UserDto> userDtos = userMapper.map(userService.findAll());
-        List<User> users = userMapper.unMap(userDtos);
-        System.out.println(users.get(0));
-        return  ResponseEntity.ok(userDtos);
-    }
 }

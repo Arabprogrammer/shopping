@@ -6,11 +6,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UserDto extends BaseDto<Long> {
+public class RoleDto extends BaseDto<Long> {
 
-    private String firstName;
+    private String name;
 
-    private String lastName;
-
-    private String username;
 }
